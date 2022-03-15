@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 100%;
+            margin-bottom: -4px;
+        }
+
+        #photogallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            margin: 30px;
+        }
+
+        figure {
+            padding: 1em;
+            background-color: maroon;
+        }
+
+        figcaption {
+            background-color: rgb(197, 56, 56);
+            font-weight: bold;
+        }
+
+        figure img {
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="photogallery">
+
+        <figure>
+            <img src="images/img.desert.jpg"></img>
+            <figcaption>Desert Sunshine</figcaption>
+        </figure>
+
+        <figure>
+            <picture>
+                <source srcset="images/img.snow.jpg" media="max-width: 800px">
+                    <img src="images/img.snow.jpg"></img>
+            </picture>
+            
+            <figcaption>Cozy Snow In</figcaption>
+        </figure>
+        
+        <figure>
+                <img src="images/img.forest.jpg"></img>
+                <figcaption>Evergreen Forest</figcaption>
+        </figure>
+    </div>
+
+</body>
+</html>
