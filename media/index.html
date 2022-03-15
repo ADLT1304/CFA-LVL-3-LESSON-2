@@ -7,31 +7,57 @@
     <title>Document</title>
 
     <style>
-        iframe {
-            width: 100%;
-            height: 800px;
+        * {
+            margin: 0;
+            box-sizing: border-box;
         }
-        
-        body{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-row: 1fr 1fr 1fr;
-            grid-gap: 10px;
+        html, body {
+            width: 100%;
+            height: 100%;
         }
 
+        #hero > div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: -4px;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+        }
     </style>
 
 </head>
 <body>
-    <div></div>
-    <iframe src="photogallery.html"></iframe>
-    <div></div>
-    <div></div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yvhom1GRGJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div></div>
-    <div></div>
-    <video controls> 
-        <source src="videos/vid.horses.mp4" type="video.mp4">
-    </video>
+    <div id="hero">
+        <div id="video">
+        <video muted autoplay loop> 
+            <source src="videos/vid.horses.mp4" type="video/mp4">
+            You just got scammed
+        </video>
+        </div>
+        <div class="overlay centered">
+            <div class="text">
+                <h1>Horses In The Wild</h1>
+            </div>
+        </div>
+    <div>
 </body>
 </html>
